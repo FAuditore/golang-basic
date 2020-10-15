@@ -6,7 +6,7 @@ func main() {
 	/*
 		接口 一组方法签名 非嵌入式
 
-		当需要接口类型对象时，可以使用任意实现类代替 testInerface(value interfaceName)
+		当需要接口类型对象时，可以使用任意实现类代替 testInterface(value interfaceName)
 		接口对象不能访问实现类中的属性
 
 		一个接口的实现 可以看做实现本身的类型，访问实现类的属性和方法
@@ -20,6 +20,16 @@ func main() {
 
 		var _ interface = name 	确保name变量实现了interface接口
 		var _ eat = animal
+
+		type iface struct{
+			tab *itab
+			data unsafe.Pointer
+		}
+
+		type eface struct{
+			_type *type
+			data unsafe.Pointer
+		}
 	*/
 	var _ USB = mouse{}
 
